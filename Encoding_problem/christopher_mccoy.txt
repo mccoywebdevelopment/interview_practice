@@ -1,0 +1,4 @@
+Time taken to complete part 1: 0.7 hours
+Expected hourly rate: $37.50
+Email address: cmmccoy1996@gmail.com
+Challenge response: 267413151

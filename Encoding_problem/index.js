@@ -104,11 +104,8 @@ function encode(rawArrays,decoder,encoder){
     for(var i=0;i<rawArrays.length;++i){
         encodeArr.push([]);
         for(var ix=0;ix<rawArrays[i].length;++ix){
-            var decoderItem = encoder[i][ix];
-            var pos = findIndex(decoderItem,decoder);
-            if(rawArrays[pos.wordIndex][pos.bitIndex]=='1'){
-                console.log(pos);
-            }
+            var encoderItem = encoder[i][ix];
+            var pos = findIndex(encoderItem,decoder);
             encodeArr[i].push(rawArrays[pos.wordIndex][pos.bitIndex]);
         }
     }
@@ -116,7 +113,7 @@ function encode(rawArrays,decoder,encoder){
 }
 
 // Format
-console.log("\n\n\n\n\n\nFormate Example:");
+console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFormat Example:");
 console.log("Decoded/Raw:")
 console.log(getStringFormat(decoded));
 console.log("Encoded:");
@@ -126,30 +123,166 @@ console.log(getStringFormat(encoded));
 var text = "A"
 var rawArrays = textToBinaryArrays(true,text,decoded.length);
 var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
 console.log("\n\n\n\n\n\nExample #1 input: \""+text+"\"")
 console.log("Decoded/Raw:")
 console.log(getStringFormat(rawArrays));
 console.log("Encoded:");
-console.log(encodeArrays);
 console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
 
 // Example #2
 var text = "FRED"
 var rawArrays = textToBinaryArrays(true,text,decoded.length);
 var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
 console.log("\n\n\n\n\n\nExample #2 input: \""+text+"\"")
 console.log("Decoded/Raw:")
 console.log(getStringFormat(rawArrays));
 console.log("Encoded:");
 console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
 
 // Example #3
 var text = " :^)"
 var rawArrays = textToBinaryArrays(true,text,decoded.length);
 var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
 console.log("\n\n\n\n\n\nExample #3 input: \""+text+"\"")
 console.log("Decoded/Raw:")
 console.log(getStringFormat(rawArrays));
 console.log("Encoded:");
 console.log(getStringFormat(encodeArrays));
+console.log(dec);
 
+// Example #4
+var text = "foo"
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #4 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #5
+var text = " foo"
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #5 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #6
+var text = "foot"
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #6 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #7
+var text = "BIRD"
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #7 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #8
+var text = "...."
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #8 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #9
+var text = "^^^^"
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #9 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #10
+var text = "Woot"
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #10 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #11
+var text = "no"
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #11 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #12
+var text = "a@b."
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #12 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
+
+// Example #12
+var text = "cmmc"
+var rawArrays = textToBinaryArrays(true,text,decoded.length);
+var encodeArrays = encode(rawArrays,decoded,encoded);
+var dec = parseInt(getStringFormat(encodeArrays).replace(/\s/g, ''), 2);
+console.log("\n\n\n\n\n\nExample #12 input: \""+text+"\"")
+console.log("Decoded/Raw:")
+console.log(getStringFormat(rawArrays));
+console.log("Encoded:");
+console.log(getStringFormat(encodeArrays));
+console.log("Decimal:");
+console.log(dec);
